@@ -2,10 +2,7 @@
 
 A web application where faculty members can post, view, update, close and delete research opportunities in one place.
 
-**GitHub Repository:** https://github.com/sparklyVampire/Research-Portal-Web
-**Demo Video:** <paste video link here, or "see demo.mp4 in the ZIP">
-
-**Author:** <Saad Ali> | **Roll No:** P24P-0564 | **Class:** (BCS 5C) | **Course:** Computer Networks
+**Saad Ali** | **24P-0564** | **Computer Networks** | **(BCS 5C)** 
 
 ---
 
@@ -80,8 +77,6 @@ DB_NAME=research_portal
 ### 4. Install dependencies and start the backend
 ```bash
 python -m venv venv
-# Windows:  venv\Scripts\activate
-# Linux/Mac: source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
@@ -99,7 +94,3 @@ Import it in Postman (Import → select file) and run the requests in order. It 
 - Change status from Open to Closed
 - Form validation and success/error messages
 - No hard-coded data in the frontend
-
-## Notes
-
-- No credentials are stored in this repository; use `.env.example` as a template.
