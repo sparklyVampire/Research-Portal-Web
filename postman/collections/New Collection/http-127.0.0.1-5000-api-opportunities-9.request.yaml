@@ -1,0 +1,18 @@
+$kind: http-request
+name: http://127.0.0.1:5000/api/opportunities
+description: ""
+url: http://127.0.0.1:5000/api/opportunities/22
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "title": "ABC",
+      "description": "example",
+      "research_area": "AI",
+      "faculty_name": "Dr J",
+      "department": "Artificial Intelligence",
+      "required_skills": "Python",
+      
+    }
+order: 10000

@@ -1,0 +1,20 @@
+$kind: http-request
+name: http://127.0.0.1:5000/api/opportunities
+description: ""
+url: http://127.0.0.1:5000/api/opportunities
+method: POST
+body:
+  type: json
+  content: |
+    {
+      "title": "XYZ",
+      "description": "example",
+      "research_area": "CN",
+      "faculty_name": "Dr K",
+      "department": "Computer Science",
+      "required_skills": "C++",
+      "available_positions": 3,
+      "application_deadline": "2026-12-10",
+      "status": "Open"
+    }
+order: 2000

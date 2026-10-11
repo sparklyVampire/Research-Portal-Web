@@ -1,0 +1,20 @@
+$kind: http-request
+name: http://127.0.0.1:5000/api/opportunities
+description: ""
+url: http://127.0.0.1:5000/api/opportunities/24
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+      "title": "CDF",
+      "description": "example",
+      "research_area": "OS",
+      "faculty_name": "Dr Q",
+      "department": "Computer Science",
+      "required_skills": "C",
+      "available_positions": 5,
+      "application_deadline": "2026-11-05",
+      "status": "Closed"
+    }
+order: 6000
