@@ -172,14 +172,17 @@ td .btn:hover, td .btn:active, td .btn:focus-visible {
 }
 .detail-value { color: var(--text); margin-bottom: 1.1rem; word-break: break-word; }
 
-/* Action buttons: tidy 2x2 grid */
+/* Action buttons: one tidy row of three */
 .action-group {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.4rem;
-    width: 160px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    width: 200px;
     margin-left: auto;
 }
+
+/* Clickable rows */
+.clickable-row { cursor: pointer; }
 .action-group .btn { width: 100%; margin: 0; }
 
 /* Centered header */

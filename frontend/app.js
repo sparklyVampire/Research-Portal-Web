@@ -71,7 +71,7 @@ async function loadOpportunities() {
             const toggleBtnClass = isClosed ? "btn-outline-success" : "btn-outline-warning";
 
             return `
-                <tr>
+                <tr class="clickable-row" title="Click to view details" onclick="viewDetails(${item.id})">
                     <td><span class="badge bg-light text-dark border">#${escapeHtml(item.id)}</span></td>
                     <td class="fw-semibold">${escapeHtml(item.title)}</td>
                     <td><span class="badge bg-info-subtle text-info-emphasis border">${escapeHtml(item.research_area)}</span></td>
@@ -84,12 +84,11 @@ async function loadOpportunities() {
                     <td><span class="badge ${badgeClass}">${escapeHtml(item.status)}</span></td>
                     <td class="text-end">
                         <div class="action-group">
-                        <button class="btn btn-sm btn-outline-primary" title="View Details" onclick="viewDetails(${item.id})">View</button>
-                        <button class="btn btn-sm btn-outline-secondary" title="Edit" onclick="openEditModal(${item.id})">Edit</button>
-                        <button class="btn btn-sm ${toggleBtnClass}" title="Toggle Open/Closed" onclick="toggleStatus(${item.id}, '${escapeHtml(item.status)}')">
+                        <button class="btn btn-sm btn-outline-secondary" title="Edit" onclick="event.stopPropagation(); openEditModal(${item.id})">Edit</button>
+                        <button class="btn btn-sm ${toggleBtnClass}" title="Toggle Open/Closed" onclick="event.stopPropagation(); toggleStatus(${item.id}, '${escapeHtml(item.status)}')">
                             ${toggleActionText}
                         </button>
-                        <button class="btn btn-sm btn-outline-danger" title="Delete" onclick="deleteOpportunity(${item.id})">Delete</button>
+                        <button class="btn btn-sm btn-outline-danger" title="Delete" onclick="event.stopPropagation(); deleteOpportunity(${item.id})">Delete</button>
                         </div>
                     </td>
                 </tr>
